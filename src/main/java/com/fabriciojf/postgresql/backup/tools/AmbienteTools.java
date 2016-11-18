@@ -43,10 +43,5 @@ public class AmbienteTools {
 			new File(getPathApp() + "/download").mkdir();
 		}
 		return getPathApp() + "/download";
-	}	
-	
-	public static void main(String[] args) {
-		System.out.println(new AmbienteTools().getPathDownload());
-	}
-	
+	}			
 }

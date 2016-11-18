@@ -39,13 +39,4 @@ public class HashHelper {
 		}
 		return null;
 	}
-
-	/**
-	 * Teste de encrypt / decrypt
-	 * @param args
-	 */
-	public static void main(String args[]) {
-		System.out.println(HashHelper.encrypt("teste"));
-		System.out.println(HashHelper.decrypt(HashHelper.encrypt("teste")));
-	}
 }

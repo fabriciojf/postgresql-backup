@@ -114,22 +114,5 @@ public class RegisterHelper {
 					registerPath));
 			System.exit(0);
 		}		
-	}
-	
-	/**
-	 * Exemplo de utilizacao da classe 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		RegisterHelper helper = new RegisterHelper();
-		while (helper.hasNext()) {
-			Register r = helper.get(); 
-			if (r != null) {
-				System.out.println(r.getHost());
-			}
-			helper.next();
-		}
-		System.out.println("done");
-	}
-	
+	}	
 }
