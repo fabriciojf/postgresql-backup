@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+
+	<description>
+    Mapeamento das entidades
+  </description>
+
+	<package>com.fabriciojf.jumbo.api.dominio</package>
+
+	<entity class="Agendamento" />
+	<entity class="AgenteAuditoria" />
+	<entity class="Anotacao" />
+	<entity class="AppVersion" />
+	<entity class="Atendimento" />
+	<entity class="CallCenter" />
+	<entity class="Campanha" />
+	<entity class="CampanhaAuto" />
+	<entity class="Cargo" />
+	<entity class="Chamado" />
+	<entity class="ChartSerie" />
+	<entity class="Cidade" />
+	<entity class="Cliente" />
+	<entity class="ClienteFonte" />
+	<entity class="Config" />
+	<entity class="Contato" />
+	<entity class="DataAccess" />
+	<entity class="DbInfo" />
+	<entity class="EmailEnviado" />
+	<entity class="EmailModelo" />
+	<entity class="Endereco" />
+	<entity class="Fila" />
+	<entity class="Form" />
+	<entity class="FormAnswer" />
+	<entity class="FormChoice" />
+	<entity class="FormField" />
+	<entity class="FormFieldOption" />
+	<entity class="Fornecedor" />
+	<entity class="GrupoProduto" />
+	<entity class="GrupoRelatorio" />
+	<entity class="HistoricoChamado" />
+	<entity class="HistoricoTarefa" />
+	<entity class="Indicador" />
+	<entity class="ItemCampanha" />
+	<entity class="ItemPedido" />
+	<entity class="LigacaoTelefonica" />
+	<entity class="LogUsuario" />
+	<entity class="MensagemTarefa" />	
+	<entity class="MotivoAtendimento" />
+	<entity class="Operadora" />
+	<entity class="Pausa" />
+	<entity class="ParticipanteReuniao" />
+	<entity class="Pedido" />
+	<entity class="Perfil" />
+	<entity class="PlanoConta" />
+	<entity class="Prioridade" />
+	<entity class="Produto" />
+	<entity class="RamoAtividade" />
+	<entity class="RegistroMailing" />
+	<entity class="Relatorio" />
+	<entity class="RelatorioCampo" />
+	<entity class="RelatorioFiltro" />
+	<entity class="Reuniao" />
+	<entity class="Script" />
+	<entity class="SituacaoAtendimento" />
+	<entity class="SituacaoTarefa" />
+	<entity class="SMSEnviado" />
+	<entity class="SMSModelo" />
+	<entity class="Tarefa" />
+	<entity class="TarefaCategoria" />
+	<entity class="Telefone" />
+	<entity class="TipoAnalise" />
+	<entity class="TipoEndereco" />
+	<entity class="TipoTarefa" />
+	<entity class="Tronco" />
+	<entity class="Uf" />
+	<entity class="UnidadeMedida" />
+	<entity class="Usuario" />
+</entity-mappings>

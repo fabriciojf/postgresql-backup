@@ -1,0 +1,21 @@
+# Toda senha deve ser encriptada antes de ser utilizada no comando,
+# para encripta-la execute o proprio database-backup.jar passando
+# a senha que deseja encriptar como parametro. ex:
+#
+# java -jar /var/lib/database_backup/database-backup.jar sua_senha
+#
+# Todos os campos sao obrigatorios, e devem seguir a order descrita
+# abaixo, sendo que o parametro type so aceita os valores postgre ou mysql
+# no singular e somente caracteres minusculos.
+#
+# host database user pass label type[postgre ou mysql]
+#
+# ex:
+# 127.0.0.1 jumbocrm postgres senha_database maq_local postgre
+# 127.0.0.1 jumbo root senha_database maq_clientx mysql
+#
+# Por fim, deixe apenas 1 espaco entre os parametros para facilitar
+# a analise do comando. Nao use tab!
+
+127.0.0.1 jumbocrm postgres xask83HqRoH5cgbnPnM6Vw== CLIENTE postgre
+

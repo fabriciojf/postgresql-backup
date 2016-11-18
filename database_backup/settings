@@ -1,0 +1,2 @@
+Path_backups=/opt/backups
+Path_pgdump=/usr/bin/pg_dump
