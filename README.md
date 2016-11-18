@@ -2,6 +2,7 @@
 
 Database Backup é um sistema desenvolvido em java por [Fabricio S Costa](http://fabriciojf.com) fabriciojf@gmail.com para gerar backups de bancos Mysql e PostgreSQL. 
 
+
 ## Instalação
 
 Crie as pastas:
@@ -41,6 +42,7 @@ Exemplo:
 
 No exemplo acima serão gerados 2 backups 1 MySQL e outro PostgreSQL.
 
+
 ## Encriptando a Senha
 
 Para encriptar uma senha antes de cadastrá-la no register, rode o database_backup.jar passando a senha como parametro.
@@ -56,6 +58,7 @@ Recomenda-se após este passo a remoção do comando executado do history do ter
 ```console
 $ history -c
 ```
+
 
 ## Agendamento do Database-backup no Cron
 
@@ -89,9 +92,14 @@ Localize a linha que contenha o /etc/cron.daily, ex:
 25 1    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
 ```
 
+
 ## Empacotando o jar
 
 Utilize o plugin fatjar no eclipse para empacotar todas as libs em apenas 1 arquivo .jar. Conheça o fatjar
 
 * [Fat Jar Eclipse Plug-In](http://fjep.sourceforge.net/)
 
+
+## Author
+
+* [Fabricio S Costa](http://fabriciojf.com) fabriciojf@gmail.com

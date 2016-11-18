@@ -12,13 +12,13 @@ import java.util.List;
  */
 public class CurrentVersion {
 
-	private static String app = "Jumbo Integracao";	
+	private static String app = "DatabaseBKP";	
 	private List<String> versoes = new ArrayList<String>();
 
 	/**
 	 * Versao atual do sistema
 	 */
-	private static final String currentVersion = "0.0.7.2027";
+	private static final String currentVersion = "1.0.0";
 	
 	/**
 	 * Lista as versoes formada por versao + revisao
@@ -26,7 +26,8 @@ public class CurrentVersion {
 	 */
 	public List<String> getVersoes() {
 		
-		versoes.add("0.0.7.2027");
+		versoes.add("1.0.0"); // mudanca para o github
+		versoes.add("0.0.7.2027"); // ultima versão svn
 		versoes.add("0.0.6.2014");
 		versoes.add("0.0.5.1983");
 		versoes.add("0.0.4.1981");
