@@ -3,17 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.fabriciojf</groupId>
-	<artifactId>ping</artifactId>
+	<artifactId>database-bkp</artifactId>
 	<packaging>jar</packaging>
 	<version>0.1</version>
-	<name>ping</name>
+	<name>database-bkp</name>
 
 	<properties>
 		<base.encoding>UTF-8</base.encoding>
 		<base.sourceVersion>1.6</base.sourceVersion>
 		<base.versionFolder>${version}</base.versionFolder>
 		<base.url>fabriciojf.com</base.url>
-		<dir.publish>file:///C:\maven</dir.publish>
+		<dir.publish>file:////opt/maven</dir.publish>
 	</properties>
 
 	<build>
