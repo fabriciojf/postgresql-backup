@@ -16,13 +16,13 @@ Mova o arquivo **database_backup.jar** para a pasta **/etc/database_backup**
 
 ```console
 $ cd /etc/database_backup
-$ wget http://fabriciojf.com/downloads/database-backup.jar 
+$ wget http://fabriciojf.com/downloads/database_backup.jar 
 ```
 
 Execute o jar para criar os arquivos de configurações iniciais
 
 ```console
-$ java -jar /etc/database_backup/database-backup.jar 
+$ java -jar /etc/database_backup/database_backup.jar 
 ```
 
 ## Configurando Bancos para Backup
@@ -48,7 +48,7 @@ No exemplo acima serão gerados 2 backups 1 MySQL e outro PostgreSQL.
 Para encriptar uma senha antes de cadastrá-la no register, rode o database_backup.jar passando a senha como parametro.
  
 ```console
-$ java -jar /etc/database_backup/database-backup.jar SENHA
+$ java -jar /etc/database_backup/database_backup.jar SENHA
 ```
 
 O resultado da encriptação senha será mostrado no terminal, copie-o e cole dentro do arquivo register na coluna pass.
@@ -62,35 +62,16 @@ $ history -c
 
 ## Agendamento do Database-backup no Cron
 
-Mova o arquivo **cron-database-bkp** para a pasta **/etc/cron.daily/** 
-
-```console
-$ mv cron-database-bkp /etc/cron.daily/
-```
-
-Após copiar o script para o diretório desejado, é necessário reiniciar o daemon do cron, para que as alterações entrem em vigor.
-
-```console
-$ /etc/init.d/cron restart
-```
-
-Ps. Verifique se o arquivo **cron-database-bkp** está com permissão de execução:
-
-```console
-$ ls -l /etc/cron.daily
-```
-
-Verifique o horário que o sistema executa os crons diários
-
-```console
-$ nano /etc/crontab
-```
-
-Localize a linha que contenha o /etc/cron.daily, ex:
+Agende através do comando **crontab -e**
 
 ```cron
-25 1    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+$ crontab -e
+
+Digite no final do arquivo Cron
+
+0 23 * * * java -jar /etc/database_backup/database_backup.jar
 ```
+No caso acima o backup será gerado todos os dias as 23:00h
 
 
 ## Empacotando o jar
