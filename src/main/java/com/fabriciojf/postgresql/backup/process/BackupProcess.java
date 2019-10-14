@@ -25,7 +25,7 @@ public class BackupProcess {
 			Register r = helper.get(); 
 			if (r != null) {
 				
-				if (r.getType().equals("postgre")) {
+				if (r.getType().equals("postgresql")) {
 				
 					try {
 						PostgreSQL.backup(r.getHost(), r.getUser(), 

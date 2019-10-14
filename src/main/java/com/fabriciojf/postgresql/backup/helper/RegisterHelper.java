@@ -88,13 +88,13 @@ public class RegisterHelper {
 		out.append("# java -jar /var/lib/database_backup/database-backup.jar sua_senha").enter();
 		out.append("#").enter();
 		out.append("# Todos os campos sao obrigatorios, e devem seguir a order descrita").enter(); 
-		out.append("# abaixo, sendo que o parametro type so aceita os valores postgre ou mysql").enter();
+		out.append("# abaixo, sendo que o parametro type so aceita os valores postgresql ou mysql").enter();
 		out.append("# no singular e somente caracteres minusculos.").enter();
 		out.append("#").enter();
-		out.append("# host database user pass label type[postgre ou mysql]").enter();
+		out.append("# host database user pass label type[postgresql ou mysql]").enter();
 		out.append("#").enter();
 		out.append("# ex:").enter();
-		out.append("# 127.0.0.1 jumbocrm postgres senha_database maq_local postgre").enter();
+		out.append("# 127.0.0.1 jumbocrm postgres senha_database maq_local postgresql").enter();
 		out.append("# 127.0.0.1 jumbo root senha_database maq_clientx mysql").enter();
 		out.append("#").enter();
 		out.append("# Por fim, deixe apenas 1 espaco entre os parametros para facilitar").enter();
