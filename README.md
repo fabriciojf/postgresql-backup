@@ -3,26 +3,26 @@
 Database Backup é um sistema desenvolvido em java por [Fabricio S Costa](http://fabriciojf.com) fabriciojf@gmail.com para gerar backups de bancos Mysql e PostgreSQL. 
 
 
-## Instalação
+## Instalação direta pelo JAR
 
 Crie as pastas:
 
 ```console
-$ mkdir /var/lib/database_backup
 $ mkdir /etc/database_backup
 $ mkdir /opt/backups
 ```
 
-Mova o arquivo **database-backup.jar** para a pasta **/var/lib/database_backup**
+Mova o arquivo **database_backup.jar** para a pasta **/etc/database_backup**
 
 ```console
-$ mv ./database-backup.jar /var/lib/database_backup
+$ cd /etc/database_backup
+$ wget http://fabriciojf.com/downloads/database-backup.jar 
 ```
 
-Mova o conteúdo da pasta **database_backup** para o  diretório /etc
+Execute o jar para criar os arquivos de configurações iniciais
 
 ```console
-$ mv ./database_backup /etc
+$ java -jar /etc/database_backup/database-backup.jar 
 ```
 
 ## Configurando Bancos para Backup
@@ -48,7 +48,7 @@ No exemplo acima serão gerados 2 backups 1 MySQL e outro PostgreSQL.
 Para encriptar uma senha antes de cadastrá-la no register, rode o database_backup.jar passando a senha como parametro.
  
 ```console
-$ java -jar /var/lib/database_backup/database-backup.jar SENHA
+$ java -jar /etc/database_backup/database-backup.jar SENHA
 ```
 
 O resultado da encriptação senha será mostrado no terminal, copie-o e cole dentro do arquivo register na coluna pass.
