@@ -1,86 +1,98 @@
 # Database Backup
 
-Database Backup é um sistema desenvolvido em java por [Fabricio S Costa](http://fabriciojf.com) fabriciojf@gmail.com para gerar backups de bancos Mysql e PostgreSQL. 
+Database backup is a java system for generate PostgreSQL and Mysql backups. This documentation is a linux documentation to install, schedulle and run the jar file for generate your backups.
 
+Technologies
 
-## Instalação direta pelo JAR
+* Java
+* PostgreSQL 
+* Mysql
+* Cron
 
-Crie as pastas:
+## Jar Install 
+
+Create the folders
 
 ```console
 $ mkdir /etc/database_backup
 $ mkdir /opt/backups
 ```
 
-Mova o arquivo **database_backup.jar** para a pasta **/etc/database_backup**
+Move the files **database_backup.jar** to folder **/etc/database_backup**
 
 ```console
 $ cd /etc/database_backup
 $ wget http://fabriciojf.com/downloads/database_backup.jar 
 ```
 
-Execute o jar para criar os arquivos de configurações iniciais
+Execute the jar file to create a initial configuration at /etc/database_backup folder
 
 ```console
 $ java -jar /etc/database_backup/database_backup.jar 
 ```
 
-## Configurando Bancos para Backup
+## Configuring Database
 
-Edite o arquivo /etc/database_backup/register e insira uma linha contendo as configurações do banco que deseja backupear, seguindo o seguinte padrão:
+Edit the file **/etc/database_backup/register** adding the database configurations following the role:
 
 ```
 host database user pass label type[postgre ou mysql]
 ```
 
-Exemplo:
+Example:
 
 ```
 127.0.0.1 dbuser postgres XXXX== userdatabase postgre
 127.0.0.1 cms root XXXX== cmsdatabase mysql
 ```
 
-No exemplo acima serão gerados 2 backups 1 MySQL e outro PostgreSQL.
+* In the above example, first line is generation a PostgreSQL backup and bellow a Mysql Backup. 
+* XXXX== is the encrypted password
 
 
-## Encriptando a Senha
+## Encrypting the password
 
-Para encriptar uma senha antes de cadastrá-la no register, rode o database_backup.jar passando a senha como parametro.
+To register a new backup in the **register** file is necessary to encrypt the password before. For this, follow the tip bellow. 
+
+Run the jar file passing the password, generating a new encrypted string.
  
 ```console
 $ java -jar /etc/database_backup/database_backup.jar SENHA
 ```
+Change the **register** file introducing the encrypted password in the corresponding line.
 
-O resultado da encriptação senha será mostrado no terminal, copie-o e cole dentro do arquivo register na coluna pass.
-
-Recomenda-se após este passo a remoção do comando executado do history do terminal, através do comando history -c, neste caso todo o histórico de comando do linux será apagado.
+If you wish, clean the terminal history with the command below.
 
 ```console
 $ history -c
 ```
 
 
-## Agendamento do Database-backup no Cron
+## Scheduling a Database-backup on Cron with crontab
 
-Agende através do comando **crontab -e**
+Type **crontab -e** in the linux terminal.
 
-```cron
+```console
 $ crontab -e
+```
 
-Digite no final do arquivo Cron
+Insert a call to database_backup.jar at the end of the file cron. In the case below, the backup will be generated all days at 23:00 o'clock.
 
+```console
 0 23 * * * java -jar /etc/database_backup/database_backup.jar
 ```
-No caso acima o backup será gerado todos os dias as 23:00h
 
 
-## Empacotando o jar
+## Jar Packing
 
-Utilize o plugin fatjar no eclipse para empacotar todas as libs em apenas 1 arquivo .jar. Conheça o fatjar
+Use the fatjar plugin to  pack the jar file, adding all libs just one jar. See the link below to know more about fat jar
 
 * [Fat Jar Eclipse Plug-In](http://fjep.sourceforge.net/)
 
 
-## Author
+### Author
 
-* [Fabricio S Costa](http://fabriciojf.com) fabriciojf@gmail.com
+Fabricio S Costa - fabriciojf@gmail.com
+
+[![Linkedin: fabriciojf](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fabricioscosta/)](https://www.linkedin.com/in/fabricioscosta/)
+[![Site: fabriciojf](https://img.shields.io/badge/-PersonalSite-blue?style=flat-square&logo=wordpress&logoColor=white&link=https://fabriciojf.com)](https://fabriciojf.com)
