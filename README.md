@@ -46,7 +46,7 @@ Example:
 127.0.0.1 cms root XXXX== cmsdatabase mysql
 ```
 
-* In the above example, first line is generation a PostgreSQL backup and bellow a Mysql Backup. 
+* In the above example, first line is generating a PostgreSQL backup and bellow a Mysql Backup. 
 * XXXX== is the encrypted password
 
 
