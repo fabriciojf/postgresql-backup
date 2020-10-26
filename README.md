@@ -44,10 +44,10 @@ Example:
 $ mv /opt/database_backup.jar /etc/database_backup
 ```
 
-If you wish, download my compiled jar file:
+If you wish, download the compiled jar file: [database_backup-1.7.jar](https://github.com/fabriciojf/postgresql-backup/releases/tag/1.7)
 
 ```console
-$ wget http://fabriciojf.com/downloads/database_backup.jar
+$ wget https://github.com/fabriciojf/postgresql-backup/releases/download/1.7/database_backup-1.7.jar
 ```
 
 Execute the jar file to create a initial configuration at /etc/database_backup folder
