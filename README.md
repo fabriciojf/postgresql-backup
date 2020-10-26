@@ -1,6 +1,6 @@
 # Database Backup
 
-Database backup is a java system for generate PostgreSQL and Mysql backups. This documentation is a linux documentation to install, schedulle and run the jar file for generate your backups.
+Database backup is a java system for generate PostgreSQL and Mysql backups. This is a linux documentation to install, schedulle and run the jar file for generate your backups.
 
 Technologies
 
