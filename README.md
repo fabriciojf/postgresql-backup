@@ -9,6 +9,22 @@ Technologies
 * Mysql
 * Cron
 
+## Usage the Project
+
+With eclipse 
+
+* Clone the project 
+* Eclipse: File -> Import -> Maven -> Existing Maven Projects 
+* Select the project folder
+* Run the class [Bootstrap.java](https://github.com/fabriciojf/postgresql-backup/blob/master/src/main/java/com/fabriciojf/standalone/start/Bootstrap.java)
+
+## Jar Packing
+
+Use the fatjar plugin to  pack the jar file, adding all libs just one jar. See the link below to know more about fat jar
+
+* [Fat Jar Eclipse Plug-In](http://fjep.sourceforge.net/)
+
+
 ## Jar Install 
 
 Create the folders
@@ -18,11 +34,20 @@ $ mkdir /etc/database_backup
 $ mkdir /opt/backups
 ```
 
-Move the files **database_backup.jar** to folder **/etc/database_backup**
+Move the generated file **database_backup.jar** to folder **/etc/database_backup**
 
 ```console
-$ cd /etc/database_backup
-$ wget http://fabriciojf.com/downloads/database_backup.jar 
+$ mv {your compiled jar} /etc/database_backup
+
+Example: 
+
+$ mv /opt/database_backup.jar /etc/database_backup
+```
+
+If you wish, download my compiled jar file:
+
+```console
+$ wget http://fabriciojf.com/downloads/database_backup.jar
 ```
 
 Execute the jar file to create a initial configuration at /etc/database_backup folder
@@ -30,6 +55,11 @@ Execute the jar file to create a initial configuration at /etc/database_backup f
 ```console
 $ java -jar /etc/database_backup/database_backup.jar 
 ```
+
+See the file models
+
+* [register](https://github.com/fabriciojf/postgresql-backup/blob/master/database_backup/register) - use this file to register your databases to backup.
+* [settings](https://github.com/fabriciojf/postgresql-backup/blob/master/database_backup/settings) - use this file to register a folder to alocate your backups.
 
 ## Configuring Database
 
@@ -57,7 +87,7 @@ To register a new backup in the **register** file is necessary to encrypt the pa
 Run the jar file passing the password, generating a new encrypted string.
  
 ```console
-$ java -jar /etc/database_backup/database_backup.jar SENHA
+$ java -jar /etc/database_backup/database_backup.jar PASSWORD
 ```
 Change the **register** file introducing the encrypted password in the corresponding line.
 
@@ -82,12 +112,6 @@ Insert a call to database_backup.jar at the end of the file cron. In the case be
 0 23 * * * java -jar /etc/database_backup/database_backup.jar
 ```
 
-
-## Jar Packing
-
-Use the fatjar plugin to  pack the jar file, adding all libs just one jar. See the link below to know more about fat jar
-
-* [Fat Jar Eclipse Plug-In](http://fjep.sourceforge.net/)
 
 
 ### Author
