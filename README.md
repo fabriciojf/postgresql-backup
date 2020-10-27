@@ -76,13 +76,13 @@ Example:
 127.0.0.1 cms root XXXX== cmsdatabase mysql
 ```
 
-* In the above example, first line is generating a PostgreSQL backup and bellow a Mysql Backup. 
+* In the above example, first line is generating a PostgreSQL backup and below a Mysql Backup. 
 * XXXX== is the encrypted password
 
 
 ## Encrypting the password
 
-To register a new backup in the **register** file is necessary to encrypt the password before. For this, follow the tip bellow. 
+To register a new backup in the **register** file is necessary to encrypt the password before. For this, follow the tip below. 
 
 Run the jar file passing the password, generating a new encrypted string.
  
